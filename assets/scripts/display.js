@@ -12,7 +12,15 @@ const displayTopic = function(topics) {
   }));
 };
 
+const displayNYTArticle = function(articles) {
+  let nytTemplate = require('./templates/nyt-article.handlebars');
+  $('#NYTContainer').html(nytTemplate({
+    articles: articles
+  }));
+};
+
 module.exports = {
   displayMain,
-  displayTopic
+  displayTopic,
+  displayNYTArticle
 };
