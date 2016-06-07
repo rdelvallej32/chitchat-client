@@ -12,9 +12,10 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
+  app.currentUser.email = data.user.email;
   app.currentUser.id = data.user.id;
   console.log(app);
-  $('#username').text(app.user.email);
+  $('#username').text(app.currentUser.email);
   $('#signed-in-menu').css('visibility', 'visible');
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
   $('.landing-page').hide();
@@ -37,7 +38,6 @@ const signUpSuccess = (data) => {
     this.reset();
   });
 
-  console.log(app.user);
 
 
 };
@@ -45,6 +45,7 @@ const signUpSuccess = (data) => {
 const signOutSuccess = (data) => {
   console.log(data);
   app.currentUser.token = null;
+  app.currentUser.email = null;
   app.currentUser.id = null;
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();

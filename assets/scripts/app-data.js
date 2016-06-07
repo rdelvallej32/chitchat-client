@@ -6,6 +6,7 @@ const server = {
 
   let currentUser = {
     id: undefined,
+    email: '',
     token:''
   };
 
