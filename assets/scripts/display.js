@@ -6,7 +6,6 @@ const displayMain = function() {
 };
 
 const displayTopic = function(topics) {
-  debugger;
   let topicTemplate = require('./templates/topic.handlebars');
   $('#AskEstherContainer').html(topicTemplate({
     topics: topics
