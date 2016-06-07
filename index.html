@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>ChitChat</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">ChitChat</a>
-    </div>
+<head>
+  <title>ChitChat</title>
+
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://use.fontawesome.com/3d57428c22.js"></script>
+</head>
+
+<body class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">ChitChat</a>
+      </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -26,8 +29,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign In <span class="caret"></span></a>
+          <li class="dropdown" id="signed-in-menu" style="visibility: hidden">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="username">Username</span><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li class="signInTrigger"><a href="#" data-toggle="modal" data-target="#sign-in-modal">Sign In</a></li>
               <li><a href="#" class="sign-out-trigger" data-toggle="modal" data-target="#sign-out-modal">Sign out</a></li>
@@ -38,95 +41,114 @@
             </ul>
           </li>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
   </nav>
 
 
 
-      <!--LANDING PAGE-->
+  <!--LANDING PAGE-->
   <header class="landing-page">
-        <div class="header-content">
-            <div class="inner">
-                <h1 class="landing-text">Welcome to ChitChat!</h1>
+    <div class="header-content">
+      <div class="inner">
+        <h1 class="landing-text">Welcome to ChitChat!</h1>
 
-                <div class="image">
-                <div>
-                <img src="../images/esther.png" class="guide">
-                </div>
-                <div>
-                <p class="speech">SitePoint Rocks!</p>
-              </div>
-                </div>
-
-                <!-- SIGN UP/IN BUTTONS-->
-                <ul id="landingButtons">
-                  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal" >Sign Up</button>
-
-
-
-                  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
-                </ul>
-                <!--END SIGN UP/IN BUTTONS-->
-            </div>
+        <div class="image">
+          <div>
+            <img src="../images/esther.png" class="guide">
+          </div>
+          <div>
+            <p class="speech">SitePoint Rocks!</p>
+          </div>
         </div>
+
+        <!-- SIGN UP/IN BUTTONS-->
+        <ul id="landingButtons">
+          <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+
+          <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+        </ul>
+        <!--END SIGN UP/IN BUTTONS-->
+      </div>
+    </div>
   </header>
   <!--END LANDING PAGE-->
 
+  <!--Esther Guide -->
+<div id="AskEstherContainer">
+
+</div>
+<!--END Esther Guide-->
+
+
+<!--FOOTER-->
+<nav class="navbar navbar-default navbar-bottom" role="navigation">
+  <div class="container col-md-12 navbar-center" id="footer-icon">
+    <a href="https://github.com/rdelvallej32/"><i class="fa fa-github"></i></a>
+  </div>
+  <div class="container col-md-12 navbar-center" id="footer-copyright">
+    <p class="copyright nav navbar ">Copyright &copy; Roberto Del Valle 2016</p>
+  </div>
+</nav>
+
+</div>
+
   <!-- Sign Up Modal -->
-<div class="modal fade signUp" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">User Registration</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-block " id="sign-up">
+  <div class="modal fade signUp" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">User Registration</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-block " id="sign-up">
             <div class="form-group">
               <legend>Email</legend>
               <div class="form-group">
-              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+                <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
               </div>
-                <legend>Password</legend>
+              <legend>Password</legend>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-              </div>
-              <div class="form-group">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
               </div>
               <div class="form-group">
-            <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal" class="register-opp">Already have an account?</a>
-          </div>
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Confirm Password">
+              </div>
+              <div class="form-group">
+                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal" class="register-opp">Already have an account?</a>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
           </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<!-- Sign In Modal -->
-<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-block " id="sign-in">
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-block " id="sign-in">
             <div class="form-group">
               <legend>Welcome Back!</legend>
               <div class="form-group">
-              <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+                <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
               </div>
               <div class="form-group">
-              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
               </div>
               <div class="form-group">
                 <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModal" class="register-opp">Don't have an account?</a>
@@ -135,53 +157,54 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Sign In</button>
           </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Change Password Modal -->
-<div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Need to Update Your Password?</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-block " id="change-password">
-          <legend>Old Password</legend>
-          <div class="form-group">
-          <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+  <!-- Change Password Modal -->
+  <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Need to Update Your Password?</h4>
         </div>
-        <legend>New Password</legend>
-        <div class="form-group">
-            <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
-          </div>
+        <div class="modal-body">
+          <form class="form-block " id="change-password">
+            <legend>Old Password</legend>
+            <div class="form-group">
+              <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+            </div>
+            <legend>New Password</legend>
+            <div class="form-group">
+              <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+            </div>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Save Changes</button>
           </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Sign Out Modal -->
-<div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Are You Sure You Want To Sign Out?</h4>
-      </div>
-      <div class="modal-body">
-            <div class="form-group">
+  <!-- Sign Out Modal -->
+  <div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Are You Sure You Want To Sign Out?</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary" id="sign-out">Sign Out</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-    </body >
+</body>
+
 </html>
