@@ -13,6 +13,8 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(app);
+  $('#username').text(app.user.email);
+  $('#signed-in-menu').css('visibility', 'visible');
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
   $('.landing-page').hide();
   $('.sign-out-trigger').show();
