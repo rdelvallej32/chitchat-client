@@ -6,10 +6,15 @@ const topicApi = require('./api-topics');
 const topicUi = require('./topic-ui');
 
 const topicHandlers = function() {
-  //-----------Authentication Events-----------//
-  $('#nyt').on('click', function(event){
+  //-----------Topic Events-----------//
+  $('#rand-topic').on('click', function(event){
     event.preventDefault();
     topicApi.getRandomTopic(topicUi.getTopicSuccess, topicUi.failure);
+  });
+
+  $('#nyt-article').on('click', function(event){
+    event.preventDefault();
+    topicApi.getNytArticle(topicUi.getNytArticleSuccess, topicUi.failure);
   });
   };
 
