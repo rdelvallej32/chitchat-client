@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app-data');
+const authApi = require('./api');
 
 const success = (data) => {
   console.log(data);
@@ -38,7 +39,8 @@ const signUpSuccess = (data) => {
     this.reset();
   });
 
-
+  //invoke auto sign in
+  authApi.signIn(signInSuccess, failure, app.server.signUpData);
 
 };
 

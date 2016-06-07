@@ -8,7 +8,6 @@ const authUi = require('./auth-ui');
 const authHandlers = function() {
   //-----------Authentication Events-----------//
   $('#sign-up').on('submit', function(event){
-    debugger;
     event.preventDefault();
     let data = getFormFields(this);
     authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
