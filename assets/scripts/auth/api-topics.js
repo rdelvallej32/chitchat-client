@@ -59,10 +59,27 @@ const createRating = (success, failure, score, topic_id) => {
   .fail(failure);
 };
 
+const updateRating = (success, failure, score, id) => {
+  $.ajax({
+    method: 'PATCH',
+    url: app.server.api + '/ratings/' + id,
+    headers: {
+      Authorization: 'Token token=' + app.currentUser.token,
+    },
+    data: {
+      rating: {
+        score: score,
+      },
+    },
+  }).done(success)
+  .fail(failure);
+};
+
 module.exports = {
   getRandomTopic,
   getNytArticle,
   getRatings,
   createRating,
+  updateRating,
   app,
 };
