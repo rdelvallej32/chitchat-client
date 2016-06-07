@@ -59,6 +59,8 @@ const signOutSuccess = (data) => {
   $('body').removeClass('modal-open');
   $('#signed-in-menu').css('visibility', 'hidden');
   $('#username').text("Username");
+  $('#AskEstherContainer').html('');
+  $('#NYTContainer').html('');
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('.signInTrigger').show();
