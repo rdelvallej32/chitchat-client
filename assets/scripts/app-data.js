@@ -1,7 +1,15 @@
 'use strict';
 
-const app = {
+const server = {
   api: 'http://localhost:3000',
-};
+  };
 
-module.exports = app;
+  let currentUser = {
+    id: undefined,
+    token:''
+  };
+
+module.exports = {
+  server,
+  currentUser
+};
