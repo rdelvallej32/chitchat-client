@@ -2,6 +2,7 @@
 
 const app = require('../app-data');
 const authApi = require('./api');
+const display = require('../display');
 
 const success = (data) => {
   console.log(data);
@@ -23,6 +24,7 @@ const signInSuccess = (data) => {
   $('.sign-out-trigger').show();
   $('.signInTrigger').hide();
   $('.change-password-trigger').show();
+  display.displayMain();
   $( '#sign-in' ).each(function(){
     this.reset();
 });
