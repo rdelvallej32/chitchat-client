@@ -3,3 +3,30 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'colors';
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @import 'typography';
+
+body.container-fluid {
+  background-color: $beige;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.landing-page {
+  background-color: $foxorange;
+  width: 100%;
+}
+
+.inner {
+  align-content: center;
+  align-items: center;
+  background-color: $foxorange;
+  color: $cream;
+  flex-flow: wrap;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+
+  .inner .landing-text {
+    text-align: center;
+  }
+}
