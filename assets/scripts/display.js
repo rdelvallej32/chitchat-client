@@ -2,9 +2,18 @@
 
 const displayMain = function() {
   let mainTemplate = require('./templates/main.handlebars');
-  $('#AskEstherContainer').append(mainTemplate());
+  $('#AskEstherContainer').html(mainTemplate());
+};
+
+const displayTopic = function(topics) {
+  debugger;
+  let topicTemplate = require('./templates/topic.handlebars');
+  $('#AskEstherContainer').html(topicTemplate({
+    topics: topics
+  }));
 };
 
 module.exports = {
-  displayMain
+  displayMain,
+  displayTopic
 };
