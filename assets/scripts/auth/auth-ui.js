@@ -11,7 +11,8 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  app.user = data.user;
+  app.currentUser.token = data.user.token;
+  app.currentUser.id = data.user.id;
   console.log(app);
   $('#username').text(app.user.email);
   $('#signed-in-menu').css('visibility', 'visible');
@@ -43,7 +44,8 @@ const signUpSuccess = (data) => {
 
 const signOutSuccess = (data) => {
   console.log(data);
-  app.user = null;
+  app.currentUser.token = null;
+  app.currentUser.id = null;
   $('#sign-out-modal').hide('hide');
   $(".modal-backdrop").hide();
   $('.landing-page').show();
