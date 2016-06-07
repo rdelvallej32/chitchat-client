@@ -30,9 +30,11 @@ const signInSuccess = (data) => {
 };
 
 const signUpSuccess = (data) => {
-  app.user = data.user;
+  app.currentUser.token = data.user.token;
+  app.currentUser.email = data.user.email;
+  app.currentUser.id = data.user.id;
   console.log(data);
-  console.log(app);
+  console.log(app.server.credentials);
   $('#myModal').modal('hide'); //hide modal after sign-up
   $('.signInTrigger').show();
   $( '#sign-up' ).each(function(){
@@ -40,7 +42,7 @@ const signUpSuccess = (data) => {
   });
 
   //invoke auto sign in
-  authApi.signIn(signInSuccess, failure, app.server.signUpData);
+  // authApi.signIn(signInSuccess, failure, app.server.);
 
 };
 
