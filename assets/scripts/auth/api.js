@@ -5,7 +5,7 @@ const app = require('../app-data');
 const signUp = (success, failure, data) => {
   $.ajax({
     method: "POST",
-    url: app.api + '/sign-up',
+    url: app.server + '/sign-up',
     data,
 
   })
@@ -16,7 +16,7 @@ const signUp = (success, failure, data) => {
 const signIn = (success, failure, data) => {
   $.ajax({
     method: "POST",
-    url: app.api + '/sign-in',
+    url: app.server + '/sign-in',
     data,
 
   })
@@ -27,9 +27,9 @@ const signIn = (success, failure, data) => {
 const signOut = (success, failure) => {
   $.ajax({
     method: "DELETE",
-    url: app.api + '/sign-out/' + app.user.id,
+    url: app.server + '/sign-out/' + app.currentUser.id,
     headers: {
-      Authorization: 'Token token='+ app.user.token,
+      Authorization: 'Token token='+ app.currentUser.token,
     },
   })
   .done(success)
@@ -40,10 +40,10 @@ const passwordChange = (success, failure, data) => {
   //if(!app.user) bad;
   $.ajax({
     method: "PATCH",
-    url: app.api + '/change-password/' + app.user.id,
+    url: app.server + '/change-password/' + app.currentUser.id,
     data,
     headers: {
-      Authorization: 'Token token='+ app.user.token,
+      Authorization: 'Token token='+ app.currentUser.token,
     },
   })
   .done(success)
