@@ -48,6 +48,8 @@ const signOutSuccess = (data) => {
   $(".modal-backdrop").hide();
   $('.landing-page').show();
   $('body').removeClass('modal-open');
+  $('#signed-in-menu').css('visibility', 'hidden');
+  $('#username').text("Username");
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('.signInTrigger').show();
