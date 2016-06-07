@@ -19,9 +19,17 @@ const getTopicSuccess = (data) => {
 
 };
 
+const getNytArticleSuccess = (data) => {
+  console.log(data);
+
+  display.displayNYTArticle(data);
+
+};
+
 module.exports = {
   failure,
   success,
   getTopicSuccess,
+  getNytArticleSuccess,
   app,
 };
