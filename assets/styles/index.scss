@@ -35,7 +35,6 @@ nav {
   // align-content: center;
   // align-items: center;
   background-color: $foxorange;
-  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   margin-top: -40px;
@@ -224,6 +223,11 @@ nav {
    z-index:2;
    opacity:0;
    vertical-align: center;
+}
+
+.nytholder {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 footer {
