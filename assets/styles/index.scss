@@ -49,9 +49,17 @@ body.container-fluid {
   color: #fff;
 }
 
-.flat button:hover {
-
+.flat:hover {
+  background-color: $hovergrey;
+  cursor: pointer;
 }
+
+.flat:active {
+  background-color: $lightgrey;
+  box-shadow: 0 5px $darkgrey;
+  transform: translateY(5px);
+}
+
 
 .inner {
   background-color: $foxorange;
