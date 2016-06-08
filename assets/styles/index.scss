@@ -75,7 +75,7 @@ nav {
   border-radius: 30px;
   color: $chocolate;
   height: 100px;
-  line-height: 100px;
+  line-height: 50px;
   margin: 0 auto;
   text-align: center;
   width: 200px;
@@ -143,6 +143,8 @@ nav {
 .inner {
   background-color: $foxorange;
   color: $cream;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   // justify-content: center;
   overflow: hidden;
@@ -190,6 +192,8 @@ nav {
   unicode-bidi: bidi-override;
   direction: rtl;
   font-size: x-large;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
 .rating > span {
@@ -223,6 +227,11 @@ nav {
    z-index:2;
    opacity:0;
    vertical-align: center;
+}
+
+.loggedout-hide {
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .nytholder {
