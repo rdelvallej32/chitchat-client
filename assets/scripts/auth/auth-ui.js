@@ -24,6 +24,7 @@ const signInSuccess = (data) => {
   $('.sign-out-trigger').show();
   $('.signInTrigger').hide();
   $('.change-password-trigger').show();
+  $('.loggedout-hide').show();
   display.displayMain();
   $( '#sign-in' ).each(function(){
     this.reset();
@@ -64,6 +65,7 @@ const signOutSuccess = (data) => {
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
   $('.signInTrigger').show();
+  $('.loggedout-hide').hide();
 };
 
 const changePwSuccess = (data) => {

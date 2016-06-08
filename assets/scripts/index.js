@@ -12,4 +12,5 @@ $(() => {
   topicEvents.topicHandlers();
   $('.sign-out-trigger').hide();
   $('.change-password-trigger').hide();
+  $('.loggedout-hide').hide();
 });
