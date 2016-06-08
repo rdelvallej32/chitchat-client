@@ -7,9 +7,7 @@
         <div>
           <img src="./assets/images/esther.png" class="guide">
           <div class="speechBubble">
-            {{#each topics}}
-            <p class="topic" data-id="{{id}}">{{this.content}}</p>
-            {{/each}}
+            <p class="topic" data-id="{{topics.id}}">{{topics.content}}</p>
           </div>
         </div>
         <div>
