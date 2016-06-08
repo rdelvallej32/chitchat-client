@@ -30,7 +30,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
 
-          <li class="dropdown" id="signed-in-menu" style="visibility: hidden">
+          <li class="dropdown" id="signed-in-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="username">Username</span><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li class="signInTrigger"><a href="#" data-toggle="modal" data-target="#sign-in-modal">Sign In</a></li>
@@ -162,8 +162,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Sign Up</button>
+              <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn flat flat-2 btn-primary">Sign Up</button>
             </div>
           </form>
         </div>
@@ -194,8 +194,10 @@
                 <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModal" class="register-opp">Don't have an account?</a>
               </div>
             </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Sign In</button>
+            <div class="modal-footer">
+            <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn flat flat-2 btn-primary">Sign In</button>
+          </div>
           </form>
         </div>
       </div>
@@ -220,8 +222,10 @@
             <div class="form-group">
               <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
             </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <div class="modal-footer">
+            <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn flat-2 btn-primary">Save Changes</button>
+          </div>
           </form>
         </div>
       </div>
@@ -238,8 +242,8 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" id="sign-out">Sign Out</button>
+            <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn flat flat-2 btn-primary" id="sign-out">Sign Out</button>
           </div>
         </div>
       </div>
