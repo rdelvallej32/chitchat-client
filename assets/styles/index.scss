@@ -4,12 +4,16 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @import 'typography';
 
-body {
+body.container-fluid {
   background-color: $beige;
   margin: 0 auto;
   padding: 0;
 }
 
+nav {
+  margin: 0 auto;
+  padding: 0;
+}
 
 .flat {
   appearance: none;
@@ -51,6 +55,33 @@ body {
 
 }
 
+.image {
+  // display: flex;
+  flex-direction: column;
+}
+
+.child {
+  display: flex;
+}
+
+.speech {
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #888;
+  border: 3px solid #666;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  border-radius: 30px;
+  color: $chocolate;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  width: 200px;
+
+
+}
+
 .flat {
   background-color: $lightgrey;
   border: 0;
@@ -70,6 +101,20 @@ body {
   transform: translateY(5px);
 }
 
+.flat-2 {
+  background-color: $lightblue;
+  box-shadow: 0 10px $shadowblue;
+  font-size: 16px;
+}
+
+.flat-2:hover {
+  background-color: $hoverblue;
+}
+
+.flat-2:active {
+  background-color: $lightblue;
+  box-shadow: 0 5px $shadowblue;
+}
 
 .inner {
   background-color: $foxorange;
