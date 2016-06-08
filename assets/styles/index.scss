@@ -10,6 +10,22 @@ body.container-fluid {
   padding: 0;
 }
 
+.flat {
+  appearance: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 28px;
+  line-height: 1.8;
+  margin: 0 10px 0 0;
+  padding: 15px 25px;
+}
+
+.flat:focus {
+  outline: none;
+}
+
 .landing-page {
   align-content: center;
   align-items: center;
@@ -23,6 +39,18 @@ body.container-fluid {
   list-style-type: none;
   text-align: center;
   width: 100%;
+}
+
+.flat {
+  background-color: $lightgrey;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px $darkgrey;
+  color: #fff;
+}
+
+.flat button:hover {
+
 }
 
 .inner {
@@ -54,14 +82,27 @@ body.container-fluid {
     width: 100%;
   }
 
+  .avatar {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-left: 0 auto;
+    max-width: 120px;
+    min-width: 100px;
+    width: 100%;
+  }
+
 }
 
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
+  font-size: x-large;
   text-align: center;
 }
 .rating > span {
+  color: #fff;
   display: inline-block;
   position: relative;
   width: 1.1em;
@@ -70,6 +111,7 @@ body.container-fluid {
 .rating > *:hover ~ span,
 .rating:not(:hover) > input:checked ~ span {
   color: transparent;
+  cursor: pointer;
 }
 .rating > *:hover:before,
 .rating > *:hover ~ span:before,
@@ -89,6 +131,7 @@ body.container-fluid {
    position:relative;
    z-index:2;
    opacity:0;
+   vertical-align: center;
 }
 
 #footer-icon {
