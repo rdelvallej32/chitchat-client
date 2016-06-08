@@ -4,11 +4,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @import 'typography';
 
-body.container {
+body {
   background-color: $beige;
   margin: 0 auto;
   padding: 0;
 }
+
 
 .flat {
   appearance: none;
@@ -40,6 +41,13 @@ body.container {
   list-style-type: none;
   text-align: center;
   width: 100%;
+
+  button {
+    justify-content: center;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
 }
 
@@ -141,6 +149,10 @@ body.container {
    z-index:2;
    opacity:0;
    vertical-align: center;
+}
+
+footer {
+  background-color: #fff;
 }
 
 #footer-icon {
