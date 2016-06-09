@@ -35,6 +35,16 @@ const topicHandlers = function() {
     topicApi.updateRating(topicUi.updateRatingSuccess, topicUi.failure, score, id);
   });
 
+  $('#delete-rating').on('click', function (event) {
+    let score = $('input[name="myrating"]:checked').val();
+    debugger;
+    let id = $(".rating").data("id");
+    console.log(id);
+    console.log(score);
+    event.preventDefault();
+    topicApi.deleteRating(topicUi.deleteRatingSuccess, topicUi.failure, id);
+  });
+
   };
 
 module.exports = {
