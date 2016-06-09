@@ -1,24 +1,21 @@
 <div class="nyt-template">
   <div class="panel panel-primary">
   <div class="panel-heading">
-    <h2 class="panel-title">Title: {{articles.title}}</h2>
+    <h2 class="panel-title title">Title: {{articles.title}}</h2>
   </div>
   <div class="panel-body">
     {{!-- <! --Default panel contents --!> --}}
     <ul class="list-group">
-    <li class="list-group-item">Abstract: {{articles.abstract}}</li>
-    <li class="list-group-item">Section: {{articles.section}}</li>
+    <li class="list-group-item"><span class="bold">Abstract:</span> {{articles.abstract}}</li>
+    <li class="list-group-item"><span class="bold">Section:</span> {{articles.section}}</li>
     <li class="list-group-item">{{articles.byline}}</li>
   </ul>
   </div>
   <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-6 col-md-6">
       <div class="image">
         {{articles.multimedia.format}}
-        <p>Link: <a href="{{articles.short_url}}">{{articles.short_url}}</a></p>
-        <div>
-    </div>
-  </div>
+        <p>Link: <a href="{{articles.short_url}}">{{articles.title}}</a></p>
+      </div>
 </div>
 </div>
