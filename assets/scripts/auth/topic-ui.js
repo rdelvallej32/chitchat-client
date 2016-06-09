@@ -49,6 +49,9 @@ const deleteRatingSuccess = (data) => {
   $('#rating-success').removeClass('hidden').fadeOut(2000, function(){
     $('#rating-success').addClass('hidden').show();
   });
+  $('#update-rating').addClass('hidden');
+  $('#submit-rating').removeClass('hidden');
+  $('input[name="myrating"]').attr('checked', false);
   console.log(data);
 };
 
