@@ -74,17 +74,18 @@ nav {
   -moz-box-shadow: 2px 2px 4px #888;
   border-radius: 30px;
   color: $chocolate;
-  height: 100px;
-  line-height: 50px;
+  height: 100%;
+  line-height: 20px;
   margin: 0 auto;
   text-align: center;
-  width: 200px;
+  width: auto;
 
 
 }
 
 .esther {
-  width:auto;
+  margin: 10px;
+  width: auto;
 }
 
 .move {
