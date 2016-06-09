@@ -210,6 +210,11 @@ nav {
   text-align: center;
 }
 
+.rating-header {
+  color: $foxorange;
+  margin-bottom: -20px;
+}
+
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
