@@ -25,8 +25,6 @@ const displayNYTArticle = function(articles) {
 
 const displayRatings = function(ratings, topicID) {
   $('#submit-rating, #update-rating').addClass('hidden');
-  console.log(ratings);
-  console.log(topicID);
   let userRating = null;
   let ratingID = null;
   let topicRatings = [];

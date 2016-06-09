@@ -16,7 +16,6 @@ const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
   app.currentUser.email = data.user.email;
   app.currentUser.id = data.user.id;
-  console.log(app);
   $('#username').text(app.currentUser.email);
   $('#signed-in-menu').css('visibility', 'visible');
   $('#sign-in-modal').modal('hide'); //hide modal after sign-in
@@ -36,21 +35,17 @@ const signUpSuccess = (data) => {
   app.currentUser.token = data.user.token;
   app.currentUser.email = data.user.email;
   app.currentUser.id = data.user.id;
-  console.log(data);
-  console.log(app.server.credentials);
   $('#myModal').modal('hide'); //hide modal after sign-up
   $('.signInTrigger').show();
   $( '#sign-up' ).each(function(){
     this.reset();
   });
-
   //invoke auto sign in
-  // authApi.signIn(signInSuccess, failure, app.server.);
+  // authApi.signIn(signInSuccess, failure, app.currentUser.credentials);
 
 };
 
 const signOutSuccess = (data) => {
-  console.log(data);
   app.currentUser.token = null;
   app.currentUser.email = null;
   app.currentUser.id = null;
@@ -68,7 +63,6 @@ const signOutSuccess = (data) => {
 };
 
 const changePwSuccess = (data) => {
-  console.log(data);
   $('#change-password-modal').hide('hide');
   $(".modal-backdrop").hide();
   $('body').removeClass('modal-open');

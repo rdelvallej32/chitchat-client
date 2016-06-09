@@ -4,6 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const authApi = require('./api');
 const authUi = require('./auth-ui');
+const app = require('../app-data');
 
 const authHandlers = function() {
   //-----------Authentication Events-----------//
@@ -15,7 +16,6 @@ const authHandlers = function() {
     $('#sign-in').on('submit', function(event){
       event.preventDefault();
       let data = getFormFields(this);
-      console.log(data);
       authApi.signIn(authUi.signInSuccess, authUi.failure, data);
     });
     $('#sign-out').on('click', function(event){

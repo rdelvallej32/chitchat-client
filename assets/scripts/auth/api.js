@@ -18,7 +18,6 @@ const signIn = (success, failure, data) => {
     method: "POST",
     url: app.server.api + '/sign-in',
     data,
-
   })
   .done(success, data)
   .fail(failure);

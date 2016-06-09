@@ -20,8 +20,6 @@ const topicHandlers = function() {
   $('#submit-rating').on('click', function (event) {
     let score = $('input[name="myrating"]:checked').val();
     let topic_id = $(".topic").data("id");
-    console.log(topic_id);
-    console.log(score);
     event.preventDefault();
     topicApi.createRating(topicUi.ratingSuccess, topicUi.failure, score, topic_id);
   });
@@ -29,8 +27,6 @@ const topicHandlers = function() {
   $('#update-rating').on('click', function (event) {
     let score = $('input[name="myrating"]:checked').val();
     let id = $(".rating").data("id");
-    console.log(id);
-    console.log(score);
     event.preventDefault();
     topicApi.updateRating(topicUi.updateRatingSuccess, topicUi.failure, score, id);
   });
@@ -38,8 +34,6 @@ const topicHandlers = function() {
   $('#delete-rating').on('click', function (event) {
     let score = $('input[name="myrating"]:checked').val();
     let id = $(".rating").data("id");
-    console.log(id);
-    console.log(score);
     event.preventDefault();
     topicApi.deleteRating(topicUi.deleteRatingSuccess, topicUi.failure, id);
   });
