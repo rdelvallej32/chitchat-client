@@ -196,6 +196,7 @@ nav {
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
+  display: inline-flex;
   font-size: x-large;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -203,7 +204,7 @@ nav {
 }
 .rating > span {
   color: #fff;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   width: 1.1em;
 }
@@ -231,7 +232,7 @@ nav {
    position:relative;
    z-index:2;
    opacity:0;
-   vertical-align: center;
+   text-align: center;
 }
 
 .loggedout-hide {
