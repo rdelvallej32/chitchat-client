@@ -1,6 +1,20 @@
 <div class="nyt-template">
-  <div class="header-content">
-    <p>{{articles.title}}</p>
-    <p>{{articles.section}}</p>
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{articles.title}}</h2>
   </div>
+  <div class="panel-body">
+    <p>{{articles.abstract}}</p>
+
+  </div>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-md-6">
+      <div class="image">
+        {{articles.multimedia.format}}
+        <p>{{articles.short_url}}</p>
+        <div>
+    </div>
+  </div>
+</div>
 </div>
