@@ -9,7 +9,13 @@ const success = (data) => {
 };
 
 const failure = (error) => {
+  $('#signin-fail2').removeClass('hidden').fadeOut(2000, function(){
+    $('#signin-fail2').addClass('hidden').show();
+  });
   console.error(error);
+  $('#signin-fail').removeClass('hidden').fadeOut(2000, function(){
+    $('#signin-fail').addClass('hidden').show();
+  });
 };
 
 const signInSuccess = (data) => {
@@ -28,6 +34,9 @@ const signInSuccess = (data) => {
   $( '#sign-in' ).each(function(){
     this.reset();
 });
+$('#signin-success').removeClass('hidden').fadeOut(2000, function(){
+  $('#signin-success').addClass('hidden').show();
+});
 
 };
 
@@ -42,6 +51,9 @@ const signUpSuccess = (data) => {
   });
   //invoke auto sign in
   // authApi.signIn(signInSuccess, failure, app.currentUser.credentials);
+  $('#signup-success').removeClass('hidden').fadeOut(2000, function(){
+    $('#signup-success').addClass('hidden').show();
+  });
 
 };
 
@@ -68,6 +80,9 @@ const changePwSuccess = (data) => {
   $('body').removeClass('modal-open');
   $( '#change-password' ).each(function(){
     this.reset();
+  });
+  $('#changepass-success').removeClass('hidden').fadeOut(2000, function(){
+    $('#changepass-success').addClass('hidden').show();
   });
 };
 

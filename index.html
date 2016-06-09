@@ -97,8 +97,12 @@
         <!-- SIGN UP/IN BUTTONS-->
         <ul id="landingButtons">
           <button type="button" class="btn flat btn-default btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+          <div class="alert alert-success alert-dismissable hidden" id="signup-success" role="alert">Signed Up Successfully!</div>
+          <div class="alert alert-danger alert-dismissable hidden" id="signup-fail" role="alert">Sorry! Change a few things and try submitting again</div>
 
           <button type="button" class="btn flat btn-default btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+          <div class="alert alert-success alert-dismissable hidden" id="signin-success" role="alert">Signed In Successfully!</div>
+          <div class="alert alert-danger alert-dismissable hidden" id="signup-fail" role="alert">Sorry! Change a few things and try submitting again</div>
         </ul>
         <!--END SIGN UP/IN BUTTONS-->
       </div>
@@ -185,6 +189,8 @@
               <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
               <button type="submit" class="btn flat flat-2 btn-primary">Sign Up</button>
             </div>
+            <div class="alert alert-success alert-dismissable hidden" id="signin-success2" role="alert">Signed In Successfully!</div>
+            <div class="alert alert-danger alert-dismissable hidden" id="signin-fail2" role="alert">Sorry! Change a few things and try submitting again</div>
           </form>
         </div>
       </div>
@@ -218,6 +224,8 @@
             <button type="button" class="btn flat flat-white btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn flat flat-2 btn-primary">Sign In</button>
           </div>
+          <div class="alert alert-success alert-dismissable hidden" id="signin-success2" role="alert">Signed In Successfully!</div>
+          <div class="alert alert-danger alert-dismissable hidden" id="signin-fail2" role="alert">Sorry! Change a few things and try submitting again</div>
           </form>
         </div>
       </div>
@@ -228,6 +236,8 @@
   <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
+        <div class="alert alert-success alert-dismissable hidden" id="changepass-success" role="alert">Changed Password Successfully!</div>
+        <div class="alert alert-danger alert-dismissable hidden" id="changepass-fail" role="alert">Sorry! Change a few things and try submitting again</div>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Need to Update Your Password?</h4>
