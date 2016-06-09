@@ -17,6 +17,11 @@ nav {
   text-transform: uppercase;
 }
 
+.speech-text {
+  margin: 5px 10px;
+}
+
+
 .flat {
   appearance: none;
   border-radius: 0;
@@ -59,23 +64,27 @@ nav {
 
 .image {
   // display: flex;
-  flex-direction: column;
+  display: flex;
+  flex-flow: initial;
+  align-items: center;
+  align-self: center;
+
 }
 
-.child {
-  display: flex;
-}
+// .child {
+//   display: flex;
+// }
 
 .speech {
   background-color: #fff;
   box-shadow: 2px 2px 4px #888;
-  border: 3px solid $chocolate;
+  border: 3px solid $lightbrown;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
   -webkit-box-shadow: 2px 2px 4px #888;
   -moz-box-shadow: 2px 2px 4px #888;
   border-radius: 30px;
-  color: $chocolate;
+  color: $lightbrown;
   height: 100%;
   line-height: 20px;
   margin: 0 auto;
@@ -168,6 +177,10 @@ nav {
     justify-content: center;
   }
 
+  .inner img {
+    text-align: center;
+  }
+
   .guide {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -183,10 +196,12 @@ nav {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    display: flex;
     margin-bottom: 30px;
     margin-left: 0 auto;
     max-width: 120px;
     min-width: 100px;
+    text-align: center;
   }
 
 }
