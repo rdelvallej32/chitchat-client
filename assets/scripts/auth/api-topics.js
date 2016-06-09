@@ -75,11 +75,23 @@ const updateRating = (success, failure, score, id) => {
   .fail(failure);
 };
 
+const deleteRating = (success, failure, id) => {
+  $.ajax({
+    method: 'DELETE',
+    url: app.server.api + '/ratings/' + id,
+    headers: {
+      Authorization: 'Token token=' + app.currentUser.token,
+    },
+  }).done(success)
+  .fail(failure);
+};
+
 module.exports = {
   getRandomTopic,
   getNytArticle,
   getRatings,
   createRating,
   updateRating,
+  deleteRating,
   app,
 };
