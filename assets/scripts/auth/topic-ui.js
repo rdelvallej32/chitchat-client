@@ -43,12 +43,20 @@ const updateRatingSuccess = (data) => {
   console.log(data);
 };
 
+const deleteRatingSuccess = (data) => {
+  $('#rating-success').removeClass('hidden').fadeOut(2000, function(){
+    $('#rating-success').addClass('hidden').show();
+  });
+  console.log(data);
+};
+
 module.exports = {
   failure,
   success,
   getTopicSuccess,
   getNytArticleSuccess,
   updateRatingSuccess,
+  deleteRatingSuccess,
   ratingSuccess,
   app,
 };
