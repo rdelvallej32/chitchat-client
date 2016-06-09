@@ -11,8 +11,10 @@ body.container-fluid {
 }
 
 nav {
+  font-weight: 700;
   margin: 0 auto;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .flat {
@@ -262,6 +264,7 @@ footer {
 
 #footer-copyright {
   background-color: #fff;
+  color: #777;
   font-size: 1em;
   display: flex;
   justify-content: center;
