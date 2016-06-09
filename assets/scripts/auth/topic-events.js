@@ -37,7 +37,6 @@ const topicHandlers = function() {
 
   $('#delete-rating').on('click', function (event) {
     let score = $('input[name="myrating"]:checked').val();
-    debugger;
     let id = $(".rating").data("id");
     console.log(id);
     console.log(score);

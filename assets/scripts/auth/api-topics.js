@@ -55,7 +55,7 @@ const createRating = (success, failure, score, topic_id) => {
         topic_id: topic_id,
       },
     },
-  }).done(success)
+  }).done(success, topic_id)
   .fail(failure);
 };
 

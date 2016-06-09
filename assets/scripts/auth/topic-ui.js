@@ -34,6 +34,8 @@ const ratingSuccess = (data) => {
   });
   $('#submit-rating, #update-rating').addClass('hidden');
   console.log(data);
+  let topic_id = data.rating.topic.id;
+  authTopics.getRatings(topic_id);
 };
 
 const updateRatingSuccess = (data) => {

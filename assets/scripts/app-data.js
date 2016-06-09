@@ -2,6 +2,7 @@
 
 const server = {
   api: 'http://localhost:3000',
+  // api: 'https://chitchat-api.herokuapp.com',
   };
 
   let currentUser = {

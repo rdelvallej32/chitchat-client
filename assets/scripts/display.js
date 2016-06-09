@@ -16,8 +16,10 @@ const displayTopic = function(topics) {
 
 const displayNYTArticle = function(articles) {
   let nytTemplate = require('./templates/nyt-article.handlebars');
+  let test = articles.multimedia;
   $('#NYTContainer').html(nytTemplate({
-    articles: articles
+    articles: articles,
+    test: test
   }));
 };
 
