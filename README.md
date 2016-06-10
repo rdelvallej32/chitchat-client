@@ -11,11 +11,11 @@ Link to back end repo: https://github.com/rdelvallej32/chitchat-api
 
 Wireframes:
 
-![](./assets/images/wireframe.jpg)
+![](./assets/images/wireframe.png)
 
 ERD:
 
-![](./assets/images/erd.jpg)
+![](./assets/images/erd.png)
 
 ##### Screenshot of the App:
 
