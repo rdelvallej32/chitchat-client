@@ -27,7 +27,7 @@ Home Page:
 
 ![](./assets/images/home.png)
 
-##### Screenshot of the App:
+##### Pitchdeck:
 
 https://www.dropbox.com/s/12ksc996584c0ym/ChitChat.key.zip?dl=0
 
