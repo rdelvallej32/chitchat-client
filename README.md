@@ -27,6 +27,10 @@ Home Page:
 
 ![](./assets/images/home.png)
 
+##### Screenshot of the App:
+
+https://www.dropbox.com/s/12ksc996584c0ym/ChitChat.key.zip?dl=0
+
 
 ##### Technologies used (back end):
 
